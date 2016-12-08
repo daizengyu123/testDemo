@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>splice demo</title>
+    <script>
+        var ST = {};
+
+        (function (ST) {
+
+            var testArray = ["01", "02", "03", "04"];
+
+            //测试splice函数
+            ST.testSplice1 = function () {
+                console.log("testSplice1...");
+
+                // 从倒数第二个向后删除2个
+                testArray.splice(2, 1);
+                console.log(testArray);// ["01", "02"]
+            };
+
+            ST.testSplice2 = function () {
+                console.log("testSplice2...");
+
+                testArray.splice(-2, 1, "ssr", "r");
+                console.log(testArray);// ["01", "02", "ssr", "04"]
+            };
+
+        })(ST);
+
+    </script>
+</head>
+<body>
+
+    10<sup>2</sup>
+    10<sub>3</sub>
+    10<mark>3</mark>
+
+</body>
+</html>

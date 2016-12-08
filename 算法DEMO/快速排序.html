@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快速排序</title>
+    <script>
+
+//        function quickSort(arr, l, r) {
+//            var i, j, x;
+//            if (l < r) {
+//                i = l;
+//                j = r;
+//                x = arr[i];
+//                while (i < j) {
+//                    while (i < j && arr[j] >= x) {
+//                        j--;
+//                    }
+//                    if (i < j) {
+//                        arr[i] = arr[j];
+//                    }
+//                    while (i < j && arr[i] < x) {
+//                        i++;
+//                    }
+//                    if (i < j) {
+//                        arr[j] = arr[i];
+//                    }
+//                }
+//                arr[i] = x;
+//                //递归调用
+//                quickSort(arr, i + 1, r);
+//                quickSort(arr, l, i - 1);
+//            }
+//            return arr;
+//        }
+        var testArray = [1, 33, 44, 21, 11, 3, 4, 55, 101, 3, 0, 11];
+
+
+        function quickSort(arr) {
+
+            var len = testArray.length;
+
+            if (len == 1) {
+                return arr;
+            }
+
+            // 选择一个基准pivot，从基准开始快速排序
+            var pivotIndex = Math.floor(len/2);
+            var pivot = arr[pivotIndex];
+
+            // left存放小于基准的项，right存放大于基准的项
+            var left = [],
+                right = [];
+
+
+            while (len--) {
+
+                if (testArray[length] > testArray[length-1]) {
+
+                }
+                console.log(len);
+            }
+
+        }
+        quickSort(testArray);
+
+
+
+
+    </script>
+</head>
+<body>
+
+快速排序简单来讲就是我们选定一个数，然后比它小的都放在它左边，大于等于它的都放在它右边，那么这个时候对这个数来讲他的位置已经排到了正确的地方了，接下来要做的就是在它的左右两边分别再进行类似操作。
+
+</body>
+</html>

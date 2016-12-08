@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Split demo</title>
+    <script>
+        var ST = {};
+
+        (function (ST) {
+
+            var testStr = "01,02,03,04";
+            var testStr2 = "|01|02|03|04|";
+
+            //测试Split函数
+            ST.testSplit1 = function () {
+                console.log("testSplit1...");
+                var newStr = testStr.split("," , 2);
+                console.log(newStr); // [01,02]
+                console.log(testStr); // 不变
+            };
+
+            ST.testSplit2 = function () {
+                console.log("testSplit2...");
+                var newStr = testStr2.split("|");
+                console.log(newStr); // [01,02]
+                console.log(newStr.length); // [01,02]
+                console.log(testStr2); // 不变
+                console.log(testStr2.length); //13
+            };
+
+        })(ST);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

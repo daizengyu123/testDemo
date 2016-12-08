@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统计一个字符串出现最多的字母</title>
+    <script>
+
+        //输入：afjghdfraaaasdenas
+        //输出：a
+
+        var ST = {};
+        (function (ST) {
+
+            ST.checkPalindrom = function () {
+                var tempObj = {};
+                var str = "afjghdfraaaasdenasese";
+
+                // 这里遍历字符串并不需要转数组，使用charAt()
+                for (var i = 0, len = str.length; i < len; i++) {
+
+                    if (!tempObj[str.charAt(i)]) {
+                        tempObj[str.charAt(i)] = 1;
+                    }
+                    tempObj[str.charAt(i)] ++;
+                }
+
+
+                var maxStr = "", // 出现最多的字符
+                    maxValue = 1; //出现的次数
+
+                for (var x in tempObj) {
+                    if (tempObj[x] > maxValue) {
+                        maxValue = tempObj[x];
+                        maxStr = x;
+                    }
+                }
+
+                var finalObj = {
+                    maxStr : maxStr,
+                    maxValue : maxValue
+                };
+                return finalObj;
+
+            };
+
+
+
+        })(ST);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

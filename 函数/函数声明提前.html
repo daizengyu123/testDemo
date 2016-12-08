@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>声明提前</title>
+    <script>
+
+        //console.log(a);
+        test1();
+        function test1() {
+            console.log("test1...");
+            console.log(a);
+            var a = "test a...";
+        }
+
+        if (undefined === null) {
+            alert("相等的");
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

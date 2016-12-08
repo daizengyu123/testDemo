@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>slice demo</title>
+    <script>
+        var ST = {};
+
+        (function (ST) {
+
+            var testArray = ["01", "02", "03", "04"];
+            var testArray2 = [1, 2, 3, 4, 2, 17];
+
+            //测试splice函数
+            ST.testSlice1 = function () {
+                console.log("testSlice1...");
+
+                // 从倒数第二个向后删除2个
+                var anotherArr = testArray.slice(2, 3);
+                console.log(anotherArr);// ["03", "04"]
+            };
+
+            ST.testSlice2 = function () {
+                console.log("testSlice2...");
+
+                var anotherArr = testArray.slice(-1);
+                console.log(anotherArr);// ["04"]
+            };
+
+            ST.testFindNum = function () {
+                console.log("findnum...");
+
+                var anotherArr = testArray2.sort(function (x, y) {
+                    return x > y;
+                }).reverse();
+                console.log(anotherArr);// ["04"]
+                console.log(anotherArr[1]);// ["04"]
+            };
+
+            ST.testFindDu = function () {
+                console.log("finddu...");
+
+                var newArray = [];
+
+                testArray2.forEach(function (x) {
+                    console.log(x);
+                    if (newArray.indexOf(x) === -1) {
+                        newArray.push(x);
+                    }
+                });
+                return newArray;
+            };
+
+        })(ST);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

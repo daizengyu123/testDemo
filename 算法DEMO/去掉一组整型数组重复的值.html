@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>去掉一组整型数组重复的值</title>
+    <script>
+
+        // 比如输入:
+        // 输出: [1,13,24,11,14,2]
+        // 需要去掉重复的11 和 1 这两个元素
+        var array = [1,13,24,11,11,14,1,2];
+
+        var ST = {};
+
+        (function (ST) {
+
+            // 数组去重
+
+            // 使用对象的方式
+            ST.checkPalindrom = function () {
+                var array = [1,13,24,11,11,14,1,2];
+                //存放数组的对象
+                var tempObj = {};
+                var newArray = [];
+
+                array.forEach(function (x, i) {
+                    if (!tempObj[array[i]]) {
+                        tempObj[array[i]] = x;
+                        newArray.push(array[i]);
+                    }
+                });
+
+                return newArray;
+            };
+
+            // 使用数组方式去重
+            ST.checkPalindrom2 = function () {
+                var array = [1,13,24,11,11,14,1,2,"2","2"];
+                var newArray = [];
+                array.forEach(function (x, i, a) {
+                    // x 数组元素， i 数组索引， a 数组本身
+                    if (newArray.indexOf(x) == -1) {
+                        newArray.push(x);
+                    }
+                });
+                return newArray;
+            };
+
+        })(ST);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

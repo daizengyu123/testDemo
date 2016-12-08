@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        //console.log(sum([1,2,3,4,5]));
+//        function sum(arr) {
+//
+//            if (Array.prototype.reduce){
+//
+//                return arr.reduce(function (x, y) {
+//                    return x + y;
+//                }, 0);
+//
+//            } else {
+//
+//                var sum = 0;
+//                for (var i = 0; i < arr.length; i++){
+//                    sum = sum + arr[i];
+//                }
+//                return sum;
+//            }
+//        }
+//
+//        //移除数组 arr 中的所有值与 item 相等的元素，直接在给定的 arr 数组上进行操作，并将结果返回
+//        function removeWithoutCopy(arr, item) {
+//
+//            for (var i = 0, len = arr.length; i < len; i++) {
+//                if (item == arr[i]) {
+//                    //splice方法会改变数组长度，当减掉一个元素后，后面的元素都会前移，因此需要相应减少i的值
+//                    arr.splice(i, 1);
+//                    i--;
+//                }
+//            }
+//            console.log(arr);
+//            return arr;
+//        }
+
+        //removeWithoutCopy([1, 2, 2, 3, 4, 2, 2], 2);
+
+//        console.log(append([1, 2, 3, 4],  10));
+//        function append(arr, item) {
+//            var newArray = [];
+//            arr.forEach(function (x) {
+//                newArray.push(x);
+//            });
+//            newArray.push(item);
+//            return newArray;
+//        }
+
+
+        //console.log(truncate([1, 2, 3, 4]));
+
+//        console.log(prepend([1, 2, 3, 4], 10));
+//
+//
+//        function prepend(arr, item) {
+//
+//            var newArray = [item].concat(arr);
+//            //console.log(newArray);
+//            console.log(arr);
+//            //newArray.unshift(item);
+//            return newArray;
+//
+//        }
+        //console.log(insert([1, 2, 3, 4], 'z', 2));
+
+//        function insert(arr, item, index) {
+////            var leftArray = arr.slice(0, index);
+////            var rigthArray = arr.slice(index);
+////            console.log(rigthArray);
+////            leftArray.push(item);
+////            console.log(leftArray);
+////            var array = leftArray.concat(rigthArray);
+////
+////
+////            console.log(array);
+//            return arr.slice(0,index).concat(item).concat(arr.slice(index));
+//
+//            //return arr.concat([item]).concat(leftArray);
+//        }
+        duplicates([1, 2, 4, 4, 3, 3, 1, 5, 3]);
+
+        function duplicates(arr) {
+            var arr2 = [];
+            arr.forEach(function(x) {
+                arr.splice(x,1);
+                if (arr.indexOf(x) !== -1 && arr2.indexOf(x) === -1) {
+                    arr2.push(x)
+                }
+            });
+
+            return arr2;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

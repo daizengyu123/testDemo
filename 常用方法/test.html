@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test demo</title>
+    <script src="../../jquery.min.js"></script>
+</head>
+<body>
+
+<ul>
+    <li>click me</li>
+    <li>click me</li>
+    <li>click me</li>
+    <li>click me</li>
+</ul>
+
+<script>
+
+//    var elements = document.getElementsByTagName('li');
+//    var length = elements.length;
+//    for (var i = 0; i < length; i++) {
+//        elements[i].onclick = (function (a) {
+//            return function () {
+//                alert(a);
+//            }
+//        })(i);
+//    }
+//
+//    var elements = document.getElementsByTagName('li');
+//    var length = elements.length;
+//    for (var i = 0; i < length; i++) {
+//        elements[i].onclick = function () {
+//            alert(i);
+//        }
+//    }
+//
+//    var elements=document.getElementsByTagName('li');
+//    var length=elements.length;
+//    var handler = function(i){
+//        return function(){
+//            alert(i);
+//        }
+//    };
+//
+//    for(var i=0;i<length;i++){
+//        elements[i].onclick= handler(i);
+//    }
+    var testArray = [2,1,3,4,3,55,21,35,777,22];
+
+    function mySort(testArray) {
+
+        testArray.sort(function (compare1, compare2) {
+            return compare1 - compare2;
+        });
+        return testArray;
+    }
+
+    console.log(mySort(testArray));
+
+</script>
+</body>
+</html>

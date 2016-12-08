@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>稀疏数组</title>
+    <script>
+
+//        var a = [,,];
+//        console.log(a);
+//        console.log(a.length);
+//        var b = [1,,];
+//        console.log(b);
+//        console.log(b.length);
+//        var c = [1,2];
+//        console.log(c);
+//        console.log(c.length);
+        var d = ["11",,2,undefined];
+
+//        if (2 in d) {
+//            alert("111");
+//        }
+
+//        var len;
+//        for (var i = 0; len = d.length, i < len; i++) {
+//            if ( !(i in d) ) continue;
+//                console.log(d[i]);
+//        }
+        for (var a in d) {
+            if (!d.hasOwnProperty(a)) continue;
+            console.log(a);
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

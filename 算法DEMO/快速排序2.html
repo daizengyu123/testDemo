@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快速排序02</title>
+    <script>
+        var ST = {};
+
+        (function (ST) {
+
+            var array = [1,13,24,11,11,14,1,2];
+
+            // 冒泡排序
+            ST.quickSort = function () {
+
+                var len = array.length;
+
+                //选一个基准
+                var privot = len % 2 == 0 ? len / 2 : (len - 1) / 2;
+                var leftArray = [];
+                var rightArray = [];
+
+                for (var i = 0;  i < len; i++) {
+                    if (array[i] > array[privot]) {
+                        rightArray.push(array[i])
+                    }
+                }
+
+            };
+
+        })(ST);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
