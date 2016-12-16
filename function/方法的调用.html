@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方法的调用</title>
+
+    <script>
+
+
+
+        var o = {
+            a: 1,
+            b: 2,
+            m: function () {
+
+                var self = this;
+
+                r();
+
+                function r() {
+                    console.log("this:  " + this); // window
+                    console.log("self:  " + self); // o
+                }
+            },
+
+            te: function (a, b) {
+                var a = [];
+                //a = arguments.slice(0);
+                a = Array.prototype.slice.call(this, arguments);
+                console.log(arguments);
+                console.log(a);
+            }
+        };
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
