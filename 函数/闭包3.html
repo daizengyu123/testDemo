@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        /**
+         * 闭包循环的问题
+         */
+        window.onload = function () {
+
+            // 1
+            function assignHandler(){
+                var element = document.getElementsByName("someElement");
+                for (var i = 0; i < 4; i++) {
+                    element[i].onclick = function(name){
+                        return function () {
+                            alert(name);
+                        }
+                    }(i);
+                }
+            }
+
+            // 2
+//            function assignHandler(){
+//                var element = document.getElementsByName("someElement");
+//                for (var i = 0; i < 4; i++) {
+//                    (function (name) {
+//                        //var name = i;
+//                        element[i].onclick = function() {
+//                            alert(name);
+//                        };
+//                    })(i);
+//                }
+//            }
+
+            // 3
+//            function assignHandler(){
+//                var element = document.getElementsByName("someElement");
+//                for (var i = 0; i < 4; i++) {
+//                    (element[i].onclick = function() {
+//                        alert(arguments.callee.i);
+//                    }).i = i;
+//                }
+//            }
+
+            // 4
+//            function assignHandler(){
+//                var element = document.getElementsByName("someElement");
+//                for (var i = 0; i < 4; i++) {
+//                    (function () {
+//                        var temp = i;
+//                        element[i].onclick = function() {
+//                            alert(temp);
+//                        };
+//                    })();
+//                }
+//            }
+
+            assignHandler();
+
+        };
+
+    </script>
+</head>
+<body>
+
+    <div name="someElement" style="background-color: aqua"> 99 </div>
+    <div name="someElement" style="background-color: darkblue"> 99 </div>
+    <div name="someElement" style="background-color: blueviolet"> 99 </div>
+    <div name="someElement" style="background-color: violet"> 99 </div>
+
+</body>
+</html>

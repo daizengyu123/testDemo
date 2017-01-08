@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function createFunctions() {
+            var result = [];
+            for (var i = 0; i < 10; i++) {
+                result[i] = function () {
+                    return i;
+                };
+            }
+            return result;
+        }
+
+
+        function createFunctions2() {
+            var result = [];
+            for (var i = 0; i < 10; i++) {
+                result[i] = function (num) {
+                    return num;
+                }(i);
+            }
+            return result;
+        }
+
+        var res = createFunctions();
+        console.log(res[0]()); //10
+
+        var res2 = createFunctions2();
+        console.log(res2[0]); //0
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
