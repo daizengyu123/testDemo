@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function test(count) {
+            for (var i = 1; i <= count; i++) {
+                alert(i);
+            }
+            var i;
+            //alert(i);
+        }
+
+        function valueAtBit(num, bit) {
+            var str = num.toString(2);
+            var len = str.length;
+            return str.substr(len-bit,1);
+        }
+
+        function base10(str) {
+            return parseInt(str, 10);
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

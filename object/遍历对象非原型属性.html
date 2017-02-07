@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+//        function iterate(obj) {
+//            var array = [];
+//            for(var prop in obj) {
+//                if (obj.hasOwnProperty(prop)) {
+//                    // 注意这里不能使用obj.prop的方式，因为prop是字符串的格式。
+//                    // eg obj -> "foo" / "baz"
+//                    // obj."foo" / obj."baz"  error
+//                    // obj[foo] -> bar / obj[baz] -> bim
+//                    array.push(prop + ":" + obj[prop]);
+//                }
+//            }
+//            return array;
+//        }
+//
+//        var C = function() {
+//            this.foo = 'bar'; this.baz = 'bim';
+//        };
+//
+//        C.prototype.bop = 'bip';
+//        //console.log(iterate(new C()));
+//
+//
+//        function containsNumber(str) {
+//            var arr = str.split("");
+//
+//
+//            return arr.some(function(x) {
+//                var num = parseInt(x);
+//                console.log(num);
+//                return isNaN(num) == false;
+//
+//            });
+//        }
+//
+//
+//
+//        console.log(containsNumber('abc123'));
+
+
+        function containsRepeatingLetter(str) {
+            // rattler
+//            for (var i = 0, len = str.length; i < len; i++) {
+//                var str2 = str.substring(0, str.indexOf(str[i]));
+//                var str3 = str.substring(str.indexOf(str[i])+1, str.length-1);
+//
+//                var str4 = str2 + str3;
+//                console.log(str4);
+//                if (str4.indexOf(str[i]) != -1) return true;
+//            }
+//
+//            return false;
+
+            for(var i = 0; i < str.length; i++) {
+
+                if (str[i] == str[i+1]) {
+                    return true;
+                }
+            }
+            return false;
+
+        }
+
+       containsRepeatingLetter('ratler');
+
+
+//function getUrlParam(sUrl, sKey) {
+//    var arr = sUrl.split("?");
+//    var str = arr[1].split("#")[0];
+//    var arr2 = str.split("&");
+//
+//    var res = [];
+//
+//    if (sKey == null) {
+//        return {};
+//    }
+//
+//    arr2.forEach(function(x) {
+//        var tempArr = x.split("=");
+//        if (tempArr[0] == sKey) {
+//            res.push(tempArr[1]);
+//        }
+//    });
+//
+//    if (res.length == 1) {
+//        return res[0];
+//    } else if (res.length == 0) {
+//        return "";
+//    } else {
+//        return res;
+//    }
+//
+//}
+
+//getUrlParam('http://www.nowcoder.com?key=1&key=2&key=3&test=4#hehe', 'key');
+
+
+    function test() {
+
+        return function () {
+
+        }
+    }
+
+    // output : 24
+    console.log(mul(2)(3)(4));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

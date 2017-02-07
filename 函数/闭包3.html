@@ -10,17 +10,37 @@
          */
         window.onload = function () {
 
-            // 1
+            // before
+//            function assignHandler(){
+//                var element = document.getElementsByName("someElement");
+//                for (var i = 0; i < 4; i++) {
+//                    element[i].onclick = function(){
+//                        alert(i);
+//                    };
+//                }
+//            }
+
+            // after
             function assignHandler(){
                 var element = document.getElementsByName("someElement");
-                for (var i = 0; i < 4; i++) {
-                    element[i].onclick = function(name){
-                        return function () {
-                            alert(name);
-                        }
-                    }(i);
+                for (let i = 0; i < 4; i++) {
+                    element[i].onclick = function(){
+                        alert(i);
+                    };
                 }
             }
+
+//            // 1
+//            function assignHandler(){
+//                var element = document.getElementsByName("someElement");
+//                for (var i = 0; i < 4; i++) {
+//                    element[i].onclick = function(name){
+//                        return function () {
+//                            alert(name);
+//                        }
+//                    }(i);
+//                }
+//            }
 
             // 2
 //            function assignHandler(){
@@ -66,10 +86,10 @@
 </head>
 <body>
 
-    <div name="someElement" style="background-color: aqua"> 99 </div>
-    <div name="someElement" style="background-color: darkblue"> 99 </div>
-    <div name="someElement" style="background-color: blueviolet"> 99 </div>
-    <div name="someElement" style="background-color: violet"> 99 </div>
+    <div name="someElement" style="background-color: aqua"> 1 </div>
+    <div name="someElement" style="background-color: darkblue"> 2 </div>
+    <div name="someElement" style="background-color: blueviolet"> 3 </div>
+    <div name="someElement" style="background-color: violet"> 4 </div>
 
 </body>
 </html>
